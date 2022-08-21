@@ -1,7 +1,7 @@
 
 import './App.css';
 import Header from "./components/header/Header"
-import CardCont from './components/CardCont';
+import CardCont from './components/home/CardCont';
 import Book from './components/Book';
 import { Routes, Route } from "react-router-dom";
 import Search from './components/header/Search';

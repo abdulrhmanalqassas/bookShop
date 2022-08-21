@@ -1,10 +1,10 @@
 import { useQuery } from "react-query";
 import React from "react";
-import { axiosPublic, getBookPage } from "../api/axiosPublic";
-import Card from "./home/Card";
-import Lood from "./home/lood";
-import PageButton from "./home/PageButton";
-import HomeCard from "./home/HomeCard";
+import { axiosPublic, getBookPage } from "../../api/axiosPublic";
+import Card from "./Card";
+import Lood from "./lood";
+import PageButton from "./PageButton";
+import HomeCard from "./HomeCard";
 
 export default function CardCont() {
   const [page, setPage] = React.useState(1);
