@@ -1,9 +1,10 @@
 import * as React from "react";
 import { useNavigate } from "react-router";
-import { axiosPublic } from "../../api/axiosPublic";
+
 
 
 function Card(props) {
+
     const navigate = useNavigate()
   return (
     <div onClick={() => navigate("/book",{state:{id:props.id,name:props.name}}) }className="max-w-xs cursor-pointer ma my-1 rounded overflow-hidden shadow-lg">

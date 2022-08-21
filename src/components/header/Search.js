@@ -2,12 +2,17 @@ import React from "react";
 import { axiosPublic, getBookPage } from "../../api/axiosPublic";
 import Card from "../home/Card";
 import Lood from "../home/lood";
+import {useLocation } from "react-router";
 
-export default function Search(props) {
+export default function Search() {
+  const location = useLocation()
+  const searchValue = location.state.searchValue
+  const url =  searchValue.split(" ").slice(0, 4).join("%20")
   const [content, setContent] = React.useState([]);
+
   React.useEffect(() => {
     axiosPublic
-      .get("/?search=dickens%20great")
+      .get(`/?search=${url}`)
       .then((res) => setContent(res.data.results))
       .then((err) => console.log(err));
   }, []);

@@ -4,10 +4,11 @@ import { useNavigate } from "react-router-dom";
 
 function Header() {
   const navigate = useNavigate();
-
-  const search = () => {
+  const[ searchValue,setSearchValue ]= React.useState("")
+  const search = (e) => {
     //http://gutendex.com/books/
-    navigate("/search");
+    console.log(e)
+    navigate("/search",{state:{searchValue:e}});
   };
 
   return (
@@ -20,10 +21,12 @@ function Header() {
             type="search"
             name="search"
             placeholder="Search for any book"
+            onChange={(e)=>setSearchValue(e.target.value)}
           ></input>
+          
           <button
             type="submit"
-            onClick={() => search()}
+            onClick={() => search(searchValue)}
             className="absolute right-0 top-0 mt-5 mr-4"
           >
             <svg
