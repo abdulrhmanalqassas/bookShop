@@ -4,11 +4,11 @@ import { useNavigate } from "react-router-dom";
 
 function Header() {
   const navigate = useNavigate();
-  const[ searchValue,setSearchValue ]= React.useState("")
+  const [searchValue, setSearchValue] = React.useState("");
   const search = (e) => {
     //http://gutendex.com/books/
-    console.log(e)
-    navigate("/search",{state:{searchValue:e}});
+    console.log(e);
+    navigate("/search", { state: { searchValue: e } });
   };
 
   return (
@@ -21,9 +21,9 @@ function Header() {
             type="search"
             name="search"
             placeholder="Search for any book"
-            onChange={(e)=>setSearchValue(e.target.value)}
+            onChange={(e) => setSearchValue(e.target.value)}
           ></input>
-          
+
           <button
             type="submit"
             onClick={() => search(searchValue)}
