@@ -1,8 +1,8 @@
 import { useQuery } from "react-query";
 import React from "react";
-import { axiosPublic, getBookPage } from "../../api/axiosPublic";
+import { getBookPage } from "../../api/axiosPublic";
 import Card from "./Card";
-import Lood from "./lood";
+import Load from "./load";
 import PageButton from "./PageButton";
 import HomeCard from "./HomeCard";
 
@@ -17,7 +17,8 @@ export default function CardCont() {
   if (isLoading)
     return (
       <div className="container items-center pl- mx-auto">
-        <Lood />
+        <Load />
+        
       </div>
     );
 

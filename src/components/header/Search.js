@@ -1,7 +1,7 @@
 import React from "react";
 import { axiosPublic, getBookPage } from "../../api/axiosPublic";
 import Card from "../home/Card";
-import Lood from "../home/lood";
+import Lood from "../home/load";
 import {useLocation } from "react-router";
 
 export default function Search() {

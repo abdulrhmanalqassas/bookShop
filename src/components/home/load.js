@@ -1,4 +1,4 @@
-export default function Lood() {
+export default function Load() {
   return (
     <div role="status">
       <svg
