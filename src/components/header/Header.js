@@ -12,15 +12,16 @@ function Header() {
   };
 
   return (
-    <nav className="relative flex flex-wrap flex-col  px-2 py-3 bg-white-500 mb-3">
-      <div className="flex items-center w-100  flex-nowrap flex-row">
+    <nav className="sticky top-0 bg-slate-100 z-50  flex flex-wrap flex-col  px-1 py-0.5 bg-white-500 mb-3 shadow-lg">
+      <div className="flex sticky  items-center w-50  flex-nowrap flex-row">
         <h1 className="text-2xl md:ml-6 font-bold">book</h1>
         <div className="pt-2 relative mx-auto  text-gray-600">
           <input
-            className="border-2  md:w-96  border-gray-300 bg-slate-200	 h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+            className="border-2  md:w-96  border-gray-300 bg-slate-200	 h-10 px-5  rounded-lg text-sm focus:outline-none"
             type="search"
             name="search"
             placeholder="Search for any book"
+            onKeyDown={(e)=>e.key==='Enter' && search(searchValue) }
             onChange={(e) => setSearchValue(e.target.value)}
           ></input>
 
@@ -46,28 +47,25 @@ function Header() {
           </button>
         </div>
 
-        {/* <div className="flex items-center mr-6">
-          <button className="  w-10 h-10  rounded-full bg-purple-600">0</button>
-          <h1>en</h1>
-        </div> */}
+        
       </div>
       <div className="flex justify-center items-center  ">
         <div
           onClick={() => navigate("/")}
-          className="px-2  cursor-pointer py-7 hover:border-b-4 border-solid  border-sky-500 hover:bg-slate-100"
+          className="px-2  cursor-pointer py-6 hover:border-b-4 border-solid  border-sky-500 hover:bg-slate-100"
         >
           HOME
         </div>
         <div
-          onClick={() => navigate("/book")}
-          className="px-2 py-7 cursor-pointer hover:border-b-4 border-solid  border-sky-500 hover:bg-slate-100"
+          onClick={() => navigate("/bestseller")}
+          className="px-2 py-6 cursor-pointer hover:border-b-4 border-solid  border-sky-500 hover:bg-slate-100"
         >
           BESTSELLER
         </div>
-        <div className="px-2 py-7 hover:border-b-4 border-solid  border-sky-500 hover:bg-slate-100">
+        <div className="px-2 py-6 hover:border-b-4 border-solid  border-sky-500 hover:bg-slate-100">
           BLOG
         </div>
-        <div className="px-2 py-7 hover:border-b-4 border-solid  border-sky-500 hover:bg-slate-100">
+        <div className="px-2 py-6 hover:border-b-4 border-solid  border-sky-500 hover:bg-slate-100">
           BLOG
         </div>
       </div>

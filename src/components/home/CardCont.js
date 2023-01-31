@@ -5,6 +5,7 @@ import Card from "./Card";
 import Load from "./load";
 import PageButton from "./PageButton";
 import HomeCard from "./HomeCard";
+import Avatar from "../../assets/images/avatar.png"
 
 export default function CardCont() {
   const [page, setPage] = React.useState(1);
@@ -34,6 +35,7 @@ export default function CardCont() {
   const nextPage = () => setPage((prev) => prev + 1);
   const prevPage = () => setPage((prev) => prev - 1);
   const nav = (
+
     <nav
       className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px"
       aria-label="Pagination"
@@ -61,8 +63,8 @@ export default function CardCont() {
 
   return (
     <>
+     <img className="fixed top-0 -z-20 blur-sm opacity-50" alt="mkjkgv" src={Avatar}/>
       <HomeCard />
-
       <div className="container  my-12 mx-auto px-4 md:px-12">
         {nav}
         <div className="flex flex-wrap items-center justify-around -mx-1 lg:-mx-4">
