@@ -4,9 +4,7 @@ import Group from "../../assets/images/Group.png"
 export default function HomeCard() {
   return (
     <>
-   
       <div className="content-center lg:px-10 p-5">
-    
         <div className="flex flex-col  justify-around  bg-blue-100 p-6 rounded-lg shadow-lg lg:flex-row">
         <img className="  lg:w-1/3 lg:h-min  "  alt="book avatar" src={Group}></img>
         <div className="  content-center h-max lg:w-1/2" >
