@@ -62,10 +62,12 @@ function Header() {
         >
           BESTSELLER
         </div>
-        <div className="px-2 py-6 hover:border-b-4 border-solid  border-sky-500 hover:bg-slate-100">
-          BLOG
+        <div 
+        onClick={() => navigate("/ny")}
+        className="px-2 py-6  cursor-pointer hover:border-b-4 border-solid  border-sky-500 hover:bg-slate-100">
+        NEW York Review
         </div>
-        <div className="px-2 py-6 hover:border-b-4 border-solid  border-sky-500 hover:bg-slate-100">
+        <div className="px-2 py-6 cursor-pointer hover:border-b-4 border-solid  border-sky-500 hover:bg-slate-100">
           BLOG
         </div>
       </div>

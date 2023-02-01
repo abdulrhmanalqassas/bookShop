@@ -4,7 +4,8 @@ import CardCont from "./components/home/CardCont";
 import Book from "./components/Book";
 import { Routes, Route } from "react-router-dom";
 import Search from "./components/header/Search";
-import BestSeller from "./components/BestSeller"
+import BestSeller from "./components/BestSeller";
+import {NYRPage } from "./components/NYRPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/book" element={<Book />} />
         <Route path="/bestseller" element={<BestSeller />} />
         <Route path="/Search" element={<Search />} />
+        <Route path="/NY" element={<NYRPage />} />
       </Routes>
     </div>
   );
