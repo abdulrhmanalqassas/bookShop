@@ -1,6 +1,8 @@
 import { useLocation } from "react-router-dom";
 import React from "react";
-import Avatar from "../assets/images/avatar.png";
+import { Link } from "react-router-dom";
+import Avatar from "../assets/images/Groupplay.png";
+
 export default function Book() {
   const location = useLocation();
   console.log("booook>>>", location.state.id);
@@ -69,26 +71,21 @@ export default function Book() {
                       </g>{" "}
                     </g>
                   </svg>
-                  /* <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-24 w-24"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                    clip-rule="evenodd"
-                  />
-                </svg> */
+                  
                 }
               </div>
             </div>
 
             <div className="space-x-8 flex justify-between mt-32 md:mt-0 md:justify-center">
-              <button className="text-white py-2 px-4 uppercase rounded bg-blue-400 hover:bg-blue-500 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
+            
+             <button 
+               onClick={()=>window.location.href=book.formats["text/html"]}
+               
+                 className="text-white inline-block py-2 px-4 uppercase rounded bg-blue-400 hover:bg-blue-500 shadow hover:shadow-lg text-center  font-medium transition transform hover:-translate-y-0.5">
                 Download
               </button>
+            
+             
               <button className="text-white py-2 px-4 uppercase rounded bg-gray-700 hover:bg-gray-800 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
                 MORE
               </button>
