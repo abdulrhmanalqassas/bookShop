@@ -8,7 +8,7 @@ function Header() {
   const search = (e) => {
     //http://gutendex.com/books/
     console.log(e);
-    navigate("/search", { state: { searchValue: e } });
+    navigate("/bookShop/search", { state: { searchValue: e } });
   };
 
   return (
@@ -51,19 +51,19 @@ function Header() {
       </div>
       <div className="flex justify-center items-center  ">
         <div
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/bookShop")}
           className="px-2  cursor-pointer py-6 hover:border-b-4 border-solid  border-sky-500 hover:bg-slate-100"
         >
           HOME
         </div>
         <div
-          onClick={() => navigate("/bestseller")}
+          onClick={() => navigate("/bookShop/bestseller")}
           className="px-2 py-6 cursor-pointer hover:border-b-4 border-solid  border-sky-500 hover:bg-slate-100"
         >
           BESTSELLER
         </div>
         <div 
-        onClick={() => navigate("/ny")}
+        onClick={() => navigate("/bookShop/ny")}
         className="px-2 py-6  cursor-pointer hover:border-b-4 border-solid  border-sky-500 hover:bg-slate-100">
         NEW York Review
         </div>

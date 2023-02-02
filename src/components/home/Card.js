@@ -7,7 +7,7 @@ function Card(props) {
 
     const navigate = useNavigate()
   return (
-    <div onClick={() => navigate("/book",{state:{book:props.book}}) }className="max-w-xs cursor-pointer ma my-1 rounded overflow-hidden shadow-lg bg-sky-300/40 ">
+    <div onClick={() => navigate("/bookShop/book",{state:{book:props.book}}) }className="max-w-xs cursor-pointer ma my-1 rounded overflow-hidden shadow-lg bg-sky-300/40 ">
       <div className="  ">
         <div className="bg-gradient-to-r from-cyan-300 to-fuchsia-300 flex items-center flex-col justify-around  font-bold text-5xl text-white h-52  mb-2">
           {props.title.split(" ").map((elem, index) => {

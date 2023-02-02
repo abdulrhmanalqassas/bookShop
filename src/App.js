@@ -14,10 +14,10 @@ function App() {
 
       <Routes>
         <Route path="/*" element={<CardCont />} />
-        <Route path="/book" element={<Book />} />
-        <Route path="/bestseller" element={<BestSeller />} />
-        <Route path="/Search" element={<Search />} />
-        <Route path="/NY" element={<NYRPage />} />
+        <Route path="/bookShop/book" element={<Book />} />
+        <Route path="/bookShop/bestseller" element={<BestSeller />} />
+        <Route path="/bookShop/Search" element={<Search />} />
+        <Route path="/bookShop/NY" element={<NYRPage />} />
       </Routes>
     </div>
   );
