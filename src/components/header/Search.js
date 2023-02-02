@@ -49,6 +49,7 @@ export default function Search() {
           {content.map((elem, index) => {
             return (
               <Card
+               book={elem}
                 id={elem.id}
                 authors={elem.authors[0] ? elem.authors[0].name : ""}
                 title={elem.title}
