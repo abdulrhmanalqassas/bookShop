@@ -65,7 +65,7 @@ export default function CardCont() {
     <>
      <img className="fixed top-0 -z-20 blur-sm opacity-50" alt="mkjkgv" src={Avatar}/>
       <HomeCard />
-      <div className="container  my-12 mx-auto px-4 md:px-12">
+      <div className="container  my-12 mx-auto px-4 md:px-6">
         {nav}
         <div className="flex flex-wrap items-center justify-around -mx-1 lg:-mx-4">
           {content.map((elem, index) => {
