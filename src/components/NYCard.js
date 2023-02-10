@@ -36,4 +36,3 @@ export const NYR = ({ img, url, title, supTitle }) => {
     </div>
   );
 };
-
